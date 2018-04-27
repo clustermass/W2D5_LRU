@@ -6,16 +6,18 @@ class Array
   def hash
     float = 0.0
     each do |el|
-      if el.is_a?(Array)
-        float += el.hash
-      elsif el.is_a?(Hash)
-        float += el.hash
-      elsif el.is_a?(String)
-        float += el.hash
-      else
-        float += el.hash
-      end
+      # if el.is_a?(Array)
+      #   float += el.hash
+      # elsif el.is_a?(Hash)
+      #   float += el.hash
+      # elsif el.is_a?(String)
+      #   float += el.hash
+      # else
+      #   float += el.hash
+      # end
+      float += el.hash
     end
+
     float.to_i
   end
 end
